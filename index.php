@@ -20,7 +20,7 @@ function getUpdates()
     global $i;
     while ($i <= 10) {
 
-        $token = "234489226:AAFbjfAvmpmE1xDllusMHaTgIRocC8asWZw";
+        $token = "Token_Bot";
 
         $updates = json_decode(Mrequest($token, "getUpdates", array("offset" => ($last_updated_id + 1))));
         if ($updates->ok == true && count($updates->result) > 0) {
